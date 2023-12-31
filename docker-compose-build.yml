@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  myapi:
+    build: 
+      context: ./API
+      dockerfile: Dockerfile
+    container_name: testapi-build
+
+  myui:
+    build: 
+      context: ./UI/dockerui
+      dockerfile: Dockerfile
+    container_name: testui-build
+    depends_on:
+      - myapi

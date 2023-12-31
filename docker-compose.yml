@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  myapi:
+    image: ${DOCKER_REGISTRY}testapi:dev
+    container_name: testapi
+
+  myui:
+    image: ${DOCKER_REGISTRY}testui:dev
+    container_name: testui
